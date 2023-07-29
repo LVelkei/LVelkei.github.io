@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,47.94 L48,47.94 L48,0 L0,0 L0,47.94 L0,47.94 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play-button-1" transform="translate(24.000000, 24.000000) rotate(-90.000000) translate(-24.000000, -24.000000) ">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M36.449,23.34 L18.852,11.34 C18.605,11.172 18.289,11.156 18.027,11.293 C17.766,11.43 17.602,11.703 17.602,12 L17.602,36 C17.602,36.297 17.766,36.57 18.027,36.707 C18.145,36.77 18.273,36.801 18.398,36.801 C18.559,36.801 18.715,36.754 18.852,36.66 L36.449,24.66 C36.668,24.512 36.801,24.266 36.801,24 C36.801,23.734 36.668,23.488 36.449,23.34 L36.449,23.34 Z M19.199,34.484 L19.199,13.516 L34.578,24 L19.199,34.484 Z" id="Fill-1" fill-opacity="0.628934556" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            <path d="M24,0 C10.766,0 0,10.766 0,24 C0,37.234 10.766,48 24,48 C37.234,48 48,37.234 48,24 C48,10.766 37.234,0 24,0 L24,0 Z M24,46.398 C11.648,46.398 1.602,36.352 1.602,24 C1.602,11.648 11.648,1.602 24,1.602 C36.352,1.602 46.398,11.648 46.398,24 C46.398,36.352 36.352,46.398 24,46.398 L24,46.398 Z" id="Fill-3" fill-opacity="0.628934556" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
