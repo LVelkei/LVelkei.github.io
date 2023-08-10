@@ -1,6 +1,6 @@
 :root {
-    --lwhiteo: #f2f2f270;
-    --lwhite: #b6fdff96;
+    --lwhiteo: #80808080;
+    --lwhite: #b6fdff90;
     --lblack: #030303;
     --lgrey: #71796c;
     --lgreen: #095313;
@@ -142,6 +142,7 @@ h3{
 
 section {
     padding: 20px;
+    overflow: hidden;
 }
 
 
@@ -365,6 +366,10 @@ section {
     .copyright{
         flex-direction: column;
     }
+
+    .plusmarginbot{
+        margin-bottom: 0.5em;
+       }
     
 }
 
