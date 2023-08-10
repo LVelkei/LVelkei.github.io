@@ -1,14 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-    --lwhite: #f3f3f3;
+    --lwhiteo: #f2f2f270;
+    --lwhite: #b6fdff96;
     --lblack: #030303;
     --lgrey: #71796c;
     --lgreen: #095313;
-    --lyellow: rgb(255, 230, 0);
-    --body-bg: hsl(0, 0%, 20%);
+    --lyellow: rgb(235, 214, 28);
+    --body-bg: hsl(32, 29%, 39%);
     --background: linear-gradient(
         45deg,
         var(--lyellow), var(--lgreen)
@@ -23,37 +20,34 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto, sans-serif;
     line-height: 1.5;
 }
 
 body {
     display: flex;
     flex-direction: column;
+/*     background-image: url(../images/endless-constellation.svg); */
 }
 
 /*NAVBAR*/
 
 
 .nav-wrapper{
-    position: relative;
+    width: 100%;
+    height: 150%;
+    padding: 25px;
     display: flex;
     justify-content: center;
-    z-index: 1;
-    
-}
-
-nav{
-    display: flex;
-    height: 65px;
-    position: relative;
     align-items: center;
-    /*background: var(--lyellow);*/
-    background: url(../images/subtle-prism-2.svg);
-    z-index: 1;
 }
 
-nav ul{
+nav {
+    position: relative;
+    background-color: var(--lwhite);
+}
+
+nav ul {
     list-style-type: none;
     float: left;
     left: 50%;
@@ -61,7 +55,7 @@ nav ul{
 }
 
 nav ul li{
-    margin: 0 20px;
+    margin: 0 30px;
     float: left;
     left: -50%;
     position: relative;
@@ -72,7 +66,14 @@ nav ul li a{
     color: var(--lblack);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1em;
+}
+
+.nav-wrapper-1{
+    background-color: var(--lwhiteo);
+}
+
+.effect-1{
+    background: transparent;
 }
 
 .effect-1 a:before,
@@ -97,28 +98,56 @@ nav ul li a{
 
 .effect-1 a:hover:before,
 .effect-1 a:hover:after{
-    width: calc(100% + 20px);
-    opacity: 0.7;
+    width: calc(100% + 10px);
+    opacity: 0.5;
 }
-
 /*NAVBAR-END*/
 
 /*TEXT*/
 
 .burkolas, .karbantartas, .kapcsolat{
-    color: var(--lwhite);
+    color: var(--lblack);
+}
+
+.plusmarginbot{
+ margin-bottom: 1.2em;
+}
+
+#years{
+    color: var(--lblack);
+    padding: 5px;
+    text-align: center;
+    z-index: 3;
+}
+
+h3{
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.neps{
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.szlogen{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
 }
 
 /*TEXT-END*/
 
 /*SECTION*/
+
 section {
     padding: 20px;
 }
 
+
 /*SECTION-END*/
 
-.karbantartas,
 .burkolas,
 .vagyonvedelem,
 .kosem{
@@ -126,53 +155,46 @@ section {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    padding-top: 30px;
 }
 
-/* .burkolas, .karbantartas, .kapcsolatWrapper{
-    background: var(--body-bg);
-    background: url(/images/abstract-timekeeper.svg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
 
-body{
-    background: var(--body-bg);
-    background: url(../images/abstract-timekeeper.svg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.vagyonvedelem, .kosem, .copyright{
+    background: var(--lwhiteo);
 }
 
-.vagyonvedelem, .kosem{
-    background: var(--lyellow);
-    background: url(../images/subtle-prism-2.svg); 
-}
 
-/* .kapcsolatWrapper{
-    background: var(--body-bg)
-} */
-
-.karbantartas h3, p{
+.karbantartas h3, p, .kosem h3,
+.karbantartas ul li p, .kosem  ul li p{
     text-align: center;
 }
 
-.karbantartas ul li p{
-    text-align: center;
-}
-
-.karbantartas ul{
+.karbantartas ul, .kosem ul{
     list-style-type: none;
     margin: 30px 0 15px 0;
 }
 
 
-.kapcsolatWrapper{
+.kapcsolatWrapper, .karbantartas{
     display: flex;
     gap: 50px;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 3px var(--lblack);
+}
+
+.karbantartasSzoveg{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.karbi{
+    padding: 20px;
+    display: flex;
+    max-height: 450px;
+    max-width: 450;
 }
 
 .kapcsolat h3, p {
@@ -181,34 +203,31 @@ body{
 
 .copyright{
     display: flex;
+    height: 60px;
     justify-content: center;
     align-items: center;
-    /*background-color: var(--lyellow);*/
-    background: url(../images/subtle-prism-2.svg);
 }
 
-.copyright p{
-    font-size: 0.7em;
-}
 
 /*BURKOLAS CARDS*/
 
 .main-container{
     display: flex;
-    gap: 2rem;
-    flex-flow: wrap;
+    flex-direction: column;
+    gap: 2em;
+    flex-flow: no-wrap;
     margin: 30px auto;
     align-items: center;
     justify-content: center;
 }
 
 .card{
-    max-width: 375px;
-    aspect-ratio: 9/6;
+    max-width: 400px;
+    aspect-ratio: 4/3;
     background: rgba(0,0,0,0.25);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     overflow: hidden;
     position: relative;
     display: flex;
@@ -217,11 +236,6 @@ body{
     cursor: pointer;
     transition: all .25s ease;
     backface-visibility: hidden;
-    /*box-shadow: 2 0 5px rgba(0,0,0,0.8);*/
-}
-
-.card:hover{
-    transform: scale(0.95);
 }
 
 .card:hover:after{
@@ -232,6 +246,8 @@ body{
     margin-bottom: 0px;
     opacity:1;
 }
+
+
 
 .card:hover img {
     transform: scale(1.25);
@@ -261,18 +277,19 @@ body{
     z-index: 30;
     position: absolute;
     bottom: 0px;
-    color: var(--lwhite);
+    color: var(--lwhiteo);
     padding: 20px;
     padding-bottom: 30px;
 }
 
 .card .con-text h2{
     font-weight: bold;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
+    text-align: center;
 }
 
 .card .con-text p{
-    font-size: .8rem;
+    font-size: .85em;
     opacity: 0;
     margin-bottom: -170px;
     transition: all .25s ease;
@@ -280,25 +297,30 @@ body{
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    text-align: left;
 }
 
 .card .con-text p button{
     padding: 7px 17px;
     border-radius: 12px;
-    background: transparent;
-    border: 2px solid var(--lwhite);
-    color: var(--lwhite);
-    margin-top: 10px;
+    background: var(--lyellow);
+    color: var(--lblack);
+    margin-top: 25px;
     margin-left: auto;
     cursor: pointer;
     transition: all .25s ease;
-    font-size: .75rem;
+    font-size: 1em;
     outline: none;
 }
 
 .card .con-text p button:hover{
-    background: var(--lwhite);
-    color: var(--lblack);
+    font-weight: bold;
+}
+
+.cardWrapper{
+    display: flex;
+    position: relative;
+    gap: 2em;
 }
 
 /*BURKOLAS CARDS-END*/
@@ -306,7 +328,7 @@ body{
 /*MEDIAQUERY*/
 
 @media only screen and (max-width: 765px) {
-    .kapcsolatWrapper{
+    .kapcsolatWrapper, .karbantartas{
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -325,9 +347,6 @@ body{
         padding-bottom: 30px;
     }
 
-    nav{
-        height: auto;
-    }
     nav ul{
         display: flex;
         flex-direction: column;
@@ -338,19 +357,21 @@ body{
         text-align: center;
     }
     
-    .main-container{
+    .main-container, .cardWrapper{
         flex-direction: column;
         justify-content: center;
         align-items:center;
+    }
+
+    .copyright{
+        flex-direction: column;
     }
     
 }
 
 @media only screen and (max-width: 970px) {
 
-    nav{
-        height: auto;
-    }
+
     nav ul{
         display: flex;
         flex-direction: column;
@@ -361,11 +382,11 @@ body{
         text-align: center;
     }
     
-    .main-container{
+    .main-container, .cardWrapper{
         flex-direction: column;
         justify-content: center;
         align-items:center;
     }
-    
+
 }
 /*MEDIAQUERY-END*/
