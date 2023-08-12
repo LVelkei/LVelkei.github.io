@@ -362,6 +362,41 @@ section {
 /*MEDIAQUERY*/
 
 @media only screen and (max-width: 765px) {
+
+    .nav-wrapper{
+        display: none;
+    }
+
+    .topnav{
+        display: block;
+    }
+    
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .hamburgerIcon{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a,
+    .topnav.responsive p{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav a,
+    .topnav p{
+        display: none;
+    }
+    .topnav a.hamburgerIcon {
+      float: right;
+      display: block;
+    }
+
     .kapcsolatWrapper, .karbantartas{
         display: flex;
         flex-direction: column;
