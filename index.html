@@ -19,8 +19,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Neps</title>
     <link rel="stylesheet" type="text/css" href="css/muhaz.css">
+    
 <!--     <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!--[if lte IE 7]>
@@ -38,7 +41,7 @@
 
     <div id="nav-warpper" class="nav-wrapper nav-wrapper-1">
         <nav class="effect-1">
-            <ul>
+            <ul id="effect-3", class="effect-3">
                 <li><a href="#burkolas">Burkolás</a></li>
                 <li><a href="#vagyonvedelem">Vagyonvédelem</a></li>
                 <li><a href="#karbantartas">Karbantartás</a></li>
@@ -48,11 +51,21 @@
         </nav>
     </div>
 
+    <div class="topnav" id="myTopnav">
+        <p>Muhaz Kft</p>
+        <a href="#burkolas" class="active">Burkolás</a>
+        <a href="#vagyonvedelem">Vagyonvédelem</a>
+        <a href="#karbantartas">Karbantartás</a>
+        <a href="#kosem">Kosaras személyemelő</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+        <a href="javascript:void(0);" class="hamburgerIcon" onclick="myHamburger()"><i class="fa fa-bars"></i></a>
+    </div>
+
     <hr>
 
     <section class="burkolas">
         <a id="burkolas"></a>
-        <h3 class=" underline plusmarginbot">Burkolási rendszerek</h3>
+        <h3 class="plusmarginbot animated">Burkolási rendszerek</h3>
         <p>Komplett burkolási megoldások a Cemix-től</p>
 
         <div class="main-container">
@@ -113,7 +126,7 @@
  
     <section class="vagyonvedelem">
         <a id="vagyonvedelem"></a>
-        <h3 class=" underline plusmarginbot">Vagyonvédelem</h3>
+        <h3 class=" plusmarginbot">Vagyonvédelem</h3>
         <p>Satel riasztórendszerek telepítése, karbantartása, kamerarendszerek telepítése.</p>
 
         <div class="main-container">
@@ -174,7 +187,7 @@
     <section class="karbantartas">
         <div class="karbantartasSzoveg">
             <a id="karbantartas"></a>
-            <h3 class=" underline plusmarginbot">Karbantartás</h3>
+            <h3 class=" plusmarginbot">Karbantartás</h3>
             <p>Épületek villamos- és építőmesteri munkálatai</p>
             <ul class="karbantartas-ul">
                 <li><p>-> villanyszerelés</p></li>
@@ -197,7 +210,7 @@
     
     <section class="kosem">
         <a id="kosem"></a>
-        <h3 class=" underline plusmarginbot">Kosaras személyemelő</h3>
+        <h3 class=" plusmarginbot">Kosaras személyemelő</h3>
         <p>Kosaras személyemelő bérlése kezelővel.</p>
         <ul class="kosem-ul">
             <li><p>-> magasban végzett munkák</p></li>
@@ -290,7 +303,7 @@
         <h4 id="years">© Neps Bt. 2004 - 2023</h4><h4>Minden jog fenntartva.</h4>
     </section>
 
-    <script src="../Muhaz/js/muhaz.js"></script>
+    <script src="../js/muhaz.js"></script>
 </body>
 
 </html>
