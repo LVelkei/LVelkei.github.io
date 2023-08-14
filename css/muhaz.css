@@ -1,5 +1,5 @@
 :root {
-    --lwhiteo: #85775180;
+    --lwhiteo: #315e2d95;
     --lwhite: #f2f2f2;
     --lblack: #0f0f0f;
     --lgrey: #71796c;
@@ -81,7 +81,10 @@ nav ul li a{
     display: block;
     color: var(--lblack);
     text-align: center;
-    padding: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -93,7 +96,7 @@ nav ul li a{
     
 .topnav .hamburgerIcon {
     display: none;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .nav-wrapper-1{
@@ -132,6 +135,25 @@ nav ul li a{
 
 /*NAVBAR-END*/
 
+/*SECTIONDIVIDER*/
+
+.downArrow{
+    height: 60px;
+    width: 100%;
+    background-color: var(--lwhiteo);
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
+}
+
+
+.upArrow{
+    height: 60px;
+    width: 100%;
+    background-color: var(--lwhiteo);
+    clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
+}
+
+/*SECTIONDIVIDER-END*/
+
 /*TEXT*/
 
 .burkolas, .karbantartas, .kapcsolat{
@@ -165,6 +187,11 @@ h3{
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 1em;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: var(--lwhiteo);
 }
 
 /*TEXT-END*/
@@ -264,6 +291,7 @@ section {
     cursor: pointer;
     transition: all .25s ease;
     backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 .card:hover:after{
