@@ -1,15 +1,11 @@
 :root {
-    --lwhiteo: #315e2d95;
+    --lwhiteo: #13bd0377;
     --lwhite: #f2f2f2;
     --lblack: #0f0f0f;
     --lgrey: #71796c;
-    --lgreen: #095313;
+    --lgreen: #09531385;
     --lyellow: rgb(235, 214, 28);
-    --body-bg: hsl(32, 29%, 39%);
-    --background: linear-gradient(
-        45deg,
-        var(--lyellow), var(--lgreen)
-        );
+    --loringe: rgb(233, 130, 12);
 }
 
 *{
@@ -135,6 +131,15 @@ nav ul li a{
 
 /*NAVBAR-END*/
 
+/*MUHAZLOGO*/
+
+.muhazLogo img{
+    position: relative;
+    width: 300px;
+}
+
+/*MUHAZLOGO-END*/
+
 /*SECTIONDIVIDER*/
 
 .downArrow{
@@ -199,13 +204,113 @@ h3{
 /*SECTION*/
 
 section {
-    padding: 20px;
+    padding: 30px;
     overflow: hidden;
 }
 
-
 /*SECTION-END*/
 
+/*BUTTON*/
+
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    right: -5px;
+    z-index: 99;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: var(--loringe);
+    color: var(--lwhite);
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 4px;
+    z-index: 55;
+  }
+  
+  #toTopBtn:hover {
+    background-color: var(--lgreen);
+  }
+
+.btn-erdekel {
+  background: var(--loringe);
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  color: var(--lwhite);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 50px;
+}
+
+.btn-erdekel:not(:disabled):hover {
+    background: var(--lgreen);
+
+  transform: scale(1.05);
+}
+
+.btn-erdekel:not(:disabled):hover:active {
+    background: var(--lgreen);
+
+    transform: scale(1.05) translateY(.125rem);
+}
+
+.btn-erdekel:focus {
+  outline: 0 solid transparent;
+}
+
+.btn-erdekel:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.btn-erdekel:focus:not(:focus-visible) {
+    background: var(--lgreen);
+
+    outline: 0 solid transparent;
+}
+
+.btn-erdekel:focus:not(:focus-visible):before {
+    background: var(--lgreen);
+}
+
+.btn-erdekel:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+/*BUTTON-END*/
+
+.rolunk{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.vision,
 .burkolas,
 .vagyonvedelem,
 .kosem{
@@ -217,7 +322,10 @@ section {
 }
 
 
-.vagyonvedelem, .kosem, .copyright{
+.vision,
+.vagyonvedelem,
+.kosem,
+.copyright{
     background: var(--lwhiteo);
 }
 
@@ -255,8 +363,13 @@ section {
     max-width: 450;
 }
 
-.kapcsolat h3, p {
+.kapcsolat h3, .kapcsolat p {
     text-align: right;
+}
+
+.vision h3, .vision p,
+.rolunkText h3, .rolunkText p {
+ text-align: left;
 }
 
 .copyright{
@@ -291,7 +404,7 @@ section {
     cursor: pointer;
     transition: all .25s ease;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .card:hover:after{
@@ -356,23 +469,6 @@ section {
     text-align: left;
 }
 
-.card .con-text p button{
-    padding: 7px 17px;
-    border-radius: 12px;
-    background: var(--lyellow);
-    color: var(--lblack);
-    margin-top: 25px;
-    margin-left: auto;
-    cursor: pointer;
-    transition: all .25s ease;
-    font-size: 1em;
-    outline: none;
-}
-
-.card .con-text p button:hover{
-    font-weight: bold;
-}
-
 .cardWrapper{
     display: flex;
     position: relative;
@@ -389,7 +485,8 @@ section {
 
 /*MEDIAQUERY*/
 
-@media only screen and (max-width: 765px) {
+/* @media only screen and (max-width: 765px) */
+@media only screen and (max-width: 665px) {
 
     .nav-wrapper{
         display: none;
@@ -420,6 +517,7 @@ section {
     .topnav p{
         display: none;
     }
+
     .topnav a.hamburgerIcon {
       float: right;
       display: block;
@@ -434,7 +532,7 @@ section {
     }
 
     .burkolas h3, .vagyonvedelem h3,
-    .karbantartas h3, .kosem h3, .kapcsolat h3, p {
+    .karbantartas h3, .kosem h3, .kapcsolat h3, .kapcsolat p {
         text-align: center;
     }
     
@@ -463,10 +561,19 @@ section {
         max-width: 250;
     }
 
+    .rolunk{
+        flex-direction: column;
+    }
+
+    .rolunkText h3, .rolunkText p,
+    .vision h3, .vision p {
+        text-align: center;
+    }
 
 }
 
-@media only screen and (max-width: 995px) {
+/* @media only screen and (max-width: 995px) */
+@media only screen and (max-width: 875px) {
 
     .nav-wrapper{
         display: none;
@@ -497,6 +604,7 @@ section {
     .topnav p{
         display: none;
     }
+
     .topnav a.hamburgerIcon {
       float: right;
       display: block;
@@ -506,6 +614,35 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items:center;
+    }
+
+    .karbantartas{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rolunk{
+        flex-direction: column;
+    }
+
+    
+    .rolunkText h3, .rolunkText p,
+    .vision h3, .vision p {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 1360px) {
+    .effect-3{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
 }

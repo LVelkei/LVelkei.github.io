@@ -2,6 +2,7 @@
 <html lang="hu">
 
 <head>
+
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
@@ -24,24 +25,17 @@
     <title>Muhaz Kft.</title>
     <link rel="stylesheet" type="text/css" href="../css/muhaz.css">
     
-<!--     <script src="https://cdn.tailwindcss.com"></script> -->
-
-    <!--[if lte IE 7]>
-<link rel="stylesheet" type="text/css" href="css/site.20170512101857-lteIE7.css">
-<![endif]-->
-    <!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="css/site.20170512101857-lteIE8.css">
-<![endif]-->
-    <!--[if gte IE 9]>
-<link rel="stylesheet" type="text/css" href="css/site.20170512101857-gteIE9.css">
-<![endif]-->
 </head>
 
 <body>
 
+    <button onclick="topFunction()" id="toTopBtn" title="Go to top">&#8593</button>
+
     <div id="nav-warpper" class="nav-wrapper nav-wrapper-1">
         <nav class="effect-1">
             <ul id="effect-3", class="effect-3">
+                <li><a href="#rolunk">Rólunk</a></li>
+                <li><a href="#vision">Víziónk, küldetésünk</a></li>
                 <li><a href="#burkolas">Burkolás</a></li>
                 <li><a href="#vagyonvedelem">Vagyonvédelem</a></li>
                 <li><a href="#karbantartas">Karbantartás</a></li>
@@ -52,6 +46,8 @@
     </div>
 
     <div class="topnav" id="myTopnav">
+        <a href="#rolunk" class="active">Rólunk</a>
+        <a href="#ision" class="active">Víziónk, küldetésünk</a>
         <a href="#burkolas" class="active">Burkolás</a>
         <a href="#vagyonvedelem">Vagyonvédelem</a>
         <a href="#karbantartas">Karbantartás</a>
@@ -62,9 +58,32 @@
 
     <div class="downArrow"></div>
 
+    <section class="rolunk">
+        <a id="rolunk"></a>
+        <div class="muhazLogo">
+            <img src="../icons/Muhaz Logo 2 nagy.png" alt="Muhaz Logo">
+        </div>
+        <div class="rolunkText">
+            <h3 class="plusmarginbot">Kik is vagyunk?</h3>
+            <p>A Muhaz Kft...</p>
+        </div>
+        <a class="btn-erdekel" href="#kapcsolat">KAPCSOLAT</a>
+    </section>
+
+    <div class="upArrow"></div>
+
+    <section class="vision">
+        <a id="vision"></a>
+        <h3 class="plusmarginbot">Víziónk, küldetésünk</h3>
+        <p>A Muhaz Kft...</p>
+        <a class="btn-erdekel" href="#kapcsolat">KAPCSOLAT</a>
+    </section>
+    
+    <div class="downArrow"></div>
+
     <section class="burkolas">
         <a id="burkolas"></a>
-        <h3 class="plusmarginbot animated">Burkolási rendszerek</h3>
+        <h3 class="plusmarginbot">Burkolási rendszerek</h3>
         <p>Komplett burkolási megoldások a Cemix-től</p>
 
         <div class="main-container">
@@ -118,6 +137,10 @@
                 
             </div>
         </div>
+
+        <p>Miért a Cemix?</p>
+        <a class="btn-erdekel" href="#kapcsolat">ÉRDEKEL!</a>
+       <!--  <button class="btn-erdekel" role="button">ÉRDEKEL!</button> -->
 
     </section>
 
@@ -178,7 +201,7 @@
 
             </div>
         </div>
-
+        <a class="btn-erdekel" href="#kapcsolat">ÉRDEKEL!</a>
     </section>
 
     <div class="downArrow"></div>
@@ -203,6 +226,7 @@
         <div class="karbantartasKep">
             <img class="karbi" src="../images/maintenance_man-628.png" alt="" class="karbantartasImg">
         </div>
+        <a class="btn-erdekel" href="#kapcsolat">ÉRDEKEL!</a>
     </section>
 
     <div class="upArrow"></div>
@@ -245,7 +269,7 @@
             </div>
 
         </div>
-
+        <a class="btn-erdekel" href="#kapcsolat">ÉRDEKEL!</a>
     </section>
 
     <div class="downArrow"></div>
@@ -284,6 +308,8 @@
     </section>
 
     <script src="../js/muhaz.js"></script>
+    <script src="../js/toTopBtn.js"></script>
+
 </body>
 
 </html>

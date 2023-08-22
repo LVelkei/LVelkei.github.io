@@ -5,4 +5,5 @@ function myHamburger() {
   } else {
     x.className = "topnav";
   }
+  
 }
