@@ -483,6 +483,53 @@ section {
 
 /*ANIMATION-END*/
 
+/*NEWSLETTER*/
+
+.newsletter{
+    display: flex;
+    place-content: center;
+
+}
+
+form {
+    border: 3px solid var(--lwhiteo);
+    max-width: 50%;
+}
+  
+.container {
+    padding: 20px;
+    background-color: var(--lwhite);
+}
+
+.container h2, .container p {
+    text-align: center;
+}
+  
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--lgrey);
+    box-sizing: border-box;
+}
+  
+input[type=checkbox] {
+    margin-top: 16px;
+}
+  
+input[type=submit] {
+    background-color: var(--lwhiteo);
+    color: var(--lblack);
+    border: none;
+}
+  
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+/*NEWSLETTER-END*/
+
 /*MEDIAQUERY*/
 
 /* @media only screen and (max-width: 765px) */
@@ -570,6 +617,11 @@ section {
         text-align: center;
     }
 
+    form {
+        border: 3px solid var(--lwhiteo);
+        max-width: 85%;
+    }
+
 }
 
 /* @media only screen and (max-width: 995px) */
@@ -634,6 +686,11 @@ section {
         text-align: center;
     }
 
+    form {
+        border: 3px solid var(--lwhiteo);
+        max-width: 85%;
+    }
+
 }
 
 @media only screen and (max-width: 1360px) {
@@ -645,5 +702,11 @@ section {
         justify-content: center;
     }
 
+    form {
+        border: 3px solid var(--lwhiteo);
+        max-width: 85%;
+    }
+
 }
+
 /*MEDIAQUERY-END*/
